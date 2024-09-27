@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - User Management System</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="container">
+                <h1>User Dashboard</h1>
+                <nav>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/register">Register</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="container">
+            <h2>Welcome, [User's Username]</h2>
+            <p>Email: [User's Email]</p>
+            <p>Here you can manage your account and view user information.</p>
+            <button onclick="location.href='/edit-profile'">Edit Profile</button>
+            <button onclick="location.href='/view-users'">View Users</button>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 User Management System. All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

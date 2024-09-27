@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure body takes full height */
+}
+
+.wrapper {
+  flex: 1; /* Allow wrapper to grow */
+}
+
+header {
+  background: #35424a;
+  color: #ffffff;
+  padding: 20px 0;
+}
+
+header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #e2e2e2;
+}
+
+main {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Stack sections vertically */
+  align-items: center; /* Center align items */
+}
+
+.features, .about, .form {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 100%; /* Make sections full width */
+  max-width: 600px; /* Max width for readability */
+}
+
+.features h2, .about h2, .form h2 {
+  color: #35424a;
+  text-align: center; /* Center the headings */
+}
+
+.features ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column; /* Stack form inputs vertically */
+}
+
+.form-group {
+  margin-bottom: 15px; /* Space between form groups */
+}
+
+.form-group label {
+  display: block; /* Make labels block elements */
+}
+
+.form-group input {
+  width: 100%; /* Full width for inputs */
+  padding: 10px; /* Space inside inputs */
+  border: 1px solid #ccc; /* Add border to inputs */
+  border-radius: 5px; /* Round corners */
+}
+
+button {
+  padding: 10px 15px; /* Padding for button */
+  background-color: #35424a; /* Button color */
+  color: #ffffff; /* Button text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Round corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Font size */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+button:hover {
+  background-color: #46707c; /* Darken button on hover */
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  position: fixed;
+  bottom: 0;
+  background: #35424a;
+  color: #ffffff;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+}
