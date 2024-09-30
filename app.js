@@ -3,6 +3,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 
+require('dotenv').config();
+const serverless = require('serverless-http');
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -130,7 +133,17 @@ app.get('/api/users', (req, res) => {
     res.json(users);
 });
 
-// Start the server
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-});
+const handler = serverless(app);
+
+const startServer = async () => {
+    app.listen(3000, () => {
+        console.log("listening on port 3000!");
+    });
+}
+
+startServer();
+
+module.exports.handler = (event, context, callback) => {
+    const response = handler(event, context, callback);
+    return response;
+};
